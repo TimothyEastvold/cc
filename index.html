@@ -105,6 +105,7 @@
   var q = params.get('q') || '';
   var distro = params.get('distro') || '';
   var path = params.get('path') || '';
+  var content = params.get('content') || '';
 
   if (!q) {
     document.getElementById('content').innerHTML =
@@ -116,6 +117,7 @@
   var clUrl = 'claude-cli://open?q=' + encodeURIComponent(q);
   if (distro) clUrl += '&distro=' + encodeURIComponent(distro);
   if (path) clUrl += '&path=' + encodeURIComponent(path);
+  if (content) clUrl += '&content=' + encodeURIComponent(content);
 
   // Build the display
   var targetLabel = distro
